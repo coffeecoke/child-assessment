@@ -1,3 +1,147 @@
-h1 {
-  color:#000;
+@import '../extend/variables.less';
+@import '../extend/mixins.less';
+.m-navbar {
+  padding:0.1rem .24rem;
+  background-color:#e72734;
+  .form-control {
+    height:100%;
+    flex:1;
+    position: relative;
+    .icon {
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      left:10px;
+      font-size:20px;
+      color:#c9c9c9;
+    }
+    input {
+      width:100%;
+      height:100%;
+      border:none;
+      outline:none;
+      border-radius: 4px;
+      background-color:#fff;
+      padding-left:30px;
+    }
+  }
+  .form-right {
+    width:.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    font-size:14px;
+    margin-left:10px;
+    i {
+      font-size:18px;
+    }
+  }
+}
+.wb-items {
+  padding:0 .24rem;
+  .wb-item {
+    padding:20px 0;
+    position: relative;
+    &:after {
+      .bottom-line(#f2f2f2)
+    }
+  }
+  .wb-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20px;
+    dl {
+      display: flex;
+      align-items: center;
+      dt {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .header-right-arrow {
+      font-size:24px;
+      color:#bec2c9;
+      font-weight: bold;
+    }
+    .user-photo {
+      width:.66rem;
+      height:.66rem;
+      img {
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+      }
+      margin-right:.2rem;
+    }
+    .user-name {
+      font-weight: normal;
+
+    }
+    .user-position {
+      color:#979797;
+      font-size:12px;
+    }
+
+  }
+  .wb-text {
+    font-size:18px;
+    line-height: 18px;
+  }
+}
+.wb-imgs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin:12px 0;
+  .img-list {
+    width:33.33%;
+    padding-right:5px;
+    padding-bottom:5px;
+    img {
+      min-width:100%;
+      height:1.56rem;
+    }
+  }
+}
+.wb-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .awesome-left {
+    display: flex;
+    align-items: center;
+    ul {
+      li {
+        float:left;
+        width:.4rem;
+        height:.4rem;
+        margin-left:-5px;
+      }
+      img {
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+      }
+    }
+    time {
+      color:rgb(193, 193, 193);
+      font-size:10px;
+      margin-left:10px;
+
+    }
+  }
+  .awesome-right {
+    color:#cacaca;
+    font-size:12px;
+    font-weight: bold;
+  }
+}
+.m-tabbar {
+  height:1.2rem;
+  .tabbar-icon {
+    font-size:20px;
+  }
 }
