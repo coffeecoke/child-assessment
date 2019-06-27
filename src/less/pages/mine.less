@@ -76,3 +76,59 @@
     }
   }
 }
+.comment-list{
+  .comment-figure{
+    display: flex;
+    border-bottom:solid 1px #f5f5f5;
+    margin-top:10px;
+  }
+}
+.comment-figure-list{
+  display: flex;
+  flex: 1;
+  dt{
+    img{
+      width: .45rem;
+      height:.45rem;
+      border-radius: 50%;
+    }
+  }
+  dd{
+    padding-left:15px;
+    p{
+      padding:4px 0;
+    }
+    .comment-name{
+      color:#7384a7;
+    }
+    .comment-content{
+      color:#505050;
+    }
+    .comment-support{
+      color: #818387;
+    }
+  }
+}
+.comment-iamges{
+  width: 1.25rem;
+  height:1.25rem;
+  img{
+    width:100%;
+    height:100%;
+    border-radius: .05rem;
+  }
+}
+.comment-support{
+  display: flex;
+  justify-content: space-between;
+  .comment-support-data{
+    span:last-child{
+      padding-left:10px;
+    }
+  }
+  .comment-support-num{
+    span{
+      padding:0 .15rem;
+    }
+  }
+}
