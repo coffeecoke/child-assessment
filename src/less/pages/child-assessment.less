@@ -1,6 +1,43 @@
+@import '../extend/variables.less';
+@import '../extend/mixins.less';
 .assess-item {
   padding:.2rem;
   background-color:#fff;
+  position: relative;
+  margin-bottom:10px;
+  &:after {
+    .bottom-line(#ccc);
+  }
+  &:before {
+    .top-line(#ccc);
+  }
+  // 人工修订
+  .manual-revision {
+    position: absolute;
+    right:20px;
+    top:50px;
+    color:#e51c23;
+    border:2px solid #e51c23;
+    width:1.5rem;
+    height:.6rem;
+    line-height: .6rem;
+    text-align: center;
+    transform:rotate(45deg);
+    font-weight:bold;
+    font-size:16px;
+  }
+
+  .assess-item_header {
+    color:#888888;
+    font-size:14px;
+    display:flex;
+    height:.8rem;
+    align-items: center;
+    justify-content: space-between;
+    .more {
+      font-size:20px;
+    }
+  }
 }
 .assess-teacher-info {
   margin-bottom:.26rem;
@@ -27,12 +64,28 @@
   color:#888;
 }
 .assess-img_lists {
+  display:flex;
+  flex-wrap: wrap;
   .assess-img_list {
-    padding:50% 0 0;
-  }
-  img {
-    width:100%;
-    max-height:6.6rem;
+    width:33.33%;
+    padding-top:33.33%;
+    position:relative;
+    border:2px solid #fff;
+    img {
+      position: absolute;
+      width:100%;
+      height:100%;
+      top:0;
+    }
+    &.only-list {
+      width:100%;
+      padding-top:0;
+      img {
+        max-width:100%;
+        height:6.6rem;
+        position: static;
+      }
+    }
   }
   
 }
@@ -43,18 +96,175 @@
 }
 .assess-item {
   .child-list {
+    li {
+      margin-bottom:.26rem;
+    }
     dl {
       display:flex;
       align-items: center;
     }
     dt {
       span {
-        font-size:16px;
+        font-size:14px;
+        font-weight:bold;
+        margin-right:.12rem;
       }
     }
     dd {
       color:#aeaeae;
-      font
+      font-size:12px;
+      span {
+        padding:0 .12rem;
+        border-right:1px solid #aeaeae;
+        &:last-child {
+          border:none;
+        }
+        .up-icon {
+          width:.32rem;
+          height:.32rem;
+          display:inline-block;
+          vertical-align: middle;
+          background:url(../../imgs/up-icon.png) center no-repeat;
+          background-size:100% auto;
+        }
+      }
+    }
+  }
+}
+.info-badge {
+  .badge {
+    background-color:#f4f5f6;
+    padding:5px 16px;
+    font-size:14px;
+    color:#a4a6aa;
+    margin-right:.2rem;
+    margin-bottom:10px;
+    &.active {
+      color:#fabeae;
+      &:after {
+        border:1px solid #fabeae;
+      }
+    }
+    .more {
+      font-size:14px;
+      margin-left:5px;
+    }
+  }
+}
+.panel {
+  margin-bottom:.28rem;
+  .panel-header {
+    margin-bottom:12px;
+    h3 {
+      font-size:14px;
+      font-weight:bold;
+      padding-left:12px;
+      position: relative;
+      &:before {
+        content:'';
+        position:absolute;
+        width:2px;
+        top:2px;
+        bottom:2px;
+        left:0;
+        background-color:#000;
+      }
+    }
+  }
+  .panel-body {
+    p {
+
+    }
+  }
+}
+.img-lists {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom:.2rem;
+  position: relative;
+  &:after {
+    .bottom-line(#ccc)
+  }
+  .img-list {
+    width:33.33%;
+    padding-top:33.33%;
+    position: relative;
+    border:2px solid #fff;
+    img {
+      position: absolute;
+      top:0;
+      bottom:0;
+      width:100%;
+    }
+  }
+}
+.comment {
+  .comment-header {
+    display: flex;
+    align-items: center;
+    color:#a2a2a2;
+    height:.8rem;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        padding:0 10px;
+        &.latest {
+          position: relative;
+          &:after {
+            content:'';
+            position: absolute;
+            right:0;
+            width:1px;
+            top:4px;
+            bottom:4px;
+            background-color:#f68a6e;
+
+          }
+        }
+        &.active {
+          color:#f68a6e;
+        }
+      }
+    }
+  }
+  .comment-item {
+    display: flex;
+    margin-bottom:.5rem;
+    dd {
+      flex:1;
+    }
+  }
+  .comment-item_photo {
+    width:.42rem;
+    height:.42rem;
+    margin-right:12px;
+    img {
+      width:100%;
+      height:100%;
+      border-radius: 50%;
+    }
+  }
+  .comment-item_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .comment-user_name {
+    color:#7384a7;
+  }
+  .awesome-num {
+    color:#808387;
+  }
+  .comment-item_text {
+    color:#505050;
+    margin:.16rem 0;
+  }
+  .comment-item_footer {
+    time {
+      color:#808387;
+      font-size:12px;
     }
   }
 }
