@@ -1,0 +1,135 @@
+.g-scrollview{
+    background: #f5f5f5;
+}
+.upload-pictures{
+    padding:.26rem;
+    border-bottom:solid 1px #dedede;
+    background: #fff;
+    .upload-introduce{
+        font-size:.3rem;
+        color:#000;
+        padding-bottom:.4rem;
+    }
+    .add-img{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li{
+            width:2.26rem;
+            height:2.26rem;
+            margin-bottom:5px;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+    }
+    .add-img:after{
+        content: '';
+        width: 33%;
+        li{
+            width:33%;
+          }
+      }
+}
+.assessment-conditions{
+    background: #fff;
+    margin-top:.2rem;
+    border-top:solid 1px #ccc;
+    .cell-item{
+        .cell-left{
+         color:#232323;
+         font-size:14px;
+         .fa{
+             padding-right:10px;
+         }
+        }
+    }
+    .add-tag{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom:.4rem;
+        li{
+            padding:2px 15px;
+            border-radius: 15px;
+            border:solid 1px #ecedef;
+            background: #f4f5f6;
+        }
+    }
+}
+.m-cell{
+    overflow: hidden;
+}
+.cell-item:nth-last-child(2){
+    &:after{
+        border-bottom:none;
+    }
+}
+.warn-box{
+    .m-cell{
+        .cell-left{
+            color:#e72734;
+        }
+        .cell-right{
+            color:#e72734;
+        }
+    }
+}
+.m-actionsheet{
+    background: #fff;
+}
+.box-label{
+    width:100%;
+    background: #fff;
+    border-bottom:solid 1px #f5f5f5;
+    border-top:solid 1px #f5f5f5;
+    padding:.2rem;
+    text-align: left;
+    h4{
+        color:#888888;
+        padding:.1rem;
+    }
+    .pag-list{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            color:#888888;
+            margin:.18rem;
+            padding:2px .2rem;
+            border:solid 1px #ecedef;
+            background: #f4f5f6;
+            border-radius: 25px;
+        }
+    }
+  }
+  .tag-introdece{
+    background: #fff;
+    padding:.2rem;
+    color:#888888;
+    text-align: left;
+  }
+  .navbar-close{
+    font-size:24px;
+  }
+  .index-list{
+      display: flex;
+      li{
+          padding:5px;
+          font-size:12px;
+          position: relative;
+          &:after{
+              content: "";
+              width:1px;
+              height:.25rem;
+              background: #b8b8b8;
+              position: absolute;
+              top:8px;
+              right:0;
+          }
+      }
+      li:last-child{
+        &:after{
+            background: transparent;
+        }
+      }
+  }
