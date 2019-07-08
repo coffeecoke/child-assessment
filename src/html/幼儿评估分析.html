@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>班级记录情况</title>
+  <link rel="stylesheet" href="../css/ydui.css">
+  <link rel="stylesheet" href="../css/pages/evaluation-analysis.css">
+  <link rel="stylesheet" href="../plugins/swiper/css/swiper.css">
+  <script src="../js/ydui.flexible.js"></script>
+</head>
+
+<body>
+  <div class="">
+    <div class="g-scrollview">
+      <div class="banner">
+        <h3 class="class-name">K-D3</h3>
+        <p>20名幼儿·指标完成度60%</p>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bar-chart" id="barChart"></div>
+      <div class="m-celltitle">学习方式</div>
+      <div class="m-cell">
+          <a href="##" class="cell-item">
+              <div class="cell-left">主动性与针对性</div>
+              <div class="cell-right cell-arrow">5</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">使用材料解决问题</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">反思</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+      </div>
+      <div class="m-celltitle">社交情感发展</div>
+      <div class="m-cell">
+          <a href="##" class="cell-item">
+              <div class="cell-left">情感</div>
+              <div class="cell-right cell-arrow">5</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">与成人建立关系</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">与其他儿童建立关系</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">集体</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">冲突解决</div>
+              <div class="cell-right cell-arrow">-</div>
+          </a>
+      </div>
+      <div class="m-celltitle">体育发展与健康</div>
+      <div class="m-cell">
+          <a href="##" class="cell-item">
+              <div class="cell-left">大肌肉运动性能</div>
+              <div class="cell-right cell-arrow">5</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">小肌肉运动性能</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">自我照顾与健康行为</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+      </div>
+      <div class="m-celltitle">中文语言交流</div>
+      <div class="m-cell">
+          <a href="##" class="cell-item">
+              <div class="cell-left">言语</div>
+              <div class="cell-right cell-arrow">5</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">倾听与理解</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">语言意识</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">阅读</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">图书的乐趣与知识</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">书写</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">中文听力与理解</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+          <a href="##" class="cell-item">
+              <div class="cell-left">中文口语</div>
+              <div class="cell-right cell-arrow">2</div>
+          </a>
+      </div>
+    </div>
+  </div>
+  <script src="../js/jquery-2.1.4.min.js"></script>
+  <script src="../js/echarts.min.js"></script>
+  <script src="../plugins/swiper/js/swiper.min.js"></script>
+  <script>
+    $(function () {
+      // 图片轮播
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30
+      });
+
+    })
+    $(function () {
+      var chart = echarts.init($('#barChart')[0])
+      var option = {
+        title: {
+          left:'center',
+          top:'14px',
+          text: '幼儿评估分析'
+        },
+        tooltip: {},
+        xAxis: {
+          splitNumber:1,
+          axisLabel:{
+              interval:0,  //类目全显
+              rotate:-45,   //顺时针旋转45度
+              textStyle: {
+                color: '#b7b7b7',//坐标值得具体的颜色
+              }
+          },
+          data: ["学习方式", "社交情感", "身体发育", "中文语言", "数学", "创造性艺术", "科学与技术", "社会学习", "英文语言"]
+        },
+        yAxis: {
+          axisLabel:{
+              textStyle: {
+                color: '#b7b7b7',//坐标值得具体的颜色
+              }
+          },
+        },
+        series: [{
+          type: 'bar',
+          markLine:{
+            data:[
+                {type: 'average',name:'平均值'}
+            ]
+          },
+          data: [{
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#c19fec'
+                }
+              },
+              value: 10
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#8696af'
+                }
+              },
+              value: 30
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#325694'
+                }
+              },
+              value: 40
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#f1b086'
+                }
+              },
+              value: 50
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#558039'
+                }
+              },
+              value: 30
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#c84249'
+                }
+              },
+              value: 10
+            },
+
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#fdbf2e'
+                }
+              },
+              value: 20
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#6f349e'
+                }
+              },
+              value: 40
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#808080'
+                }
+              },
+              value: 30
+            }
+          ]
+        }]
+
+      };
+      chart.setOption(option)
+    })
+  </script>
+</body>
+
+</html>
