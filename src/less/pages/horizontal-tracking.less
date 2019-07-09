@@ -1,1 +1,43 @@
 // 评估水平跟踪
+@import '../extend/variables.less';
+@import '../extend/mixins.less';
+.banner {
+  padding:.3rem;
+  background-color:#fff;
+  position: relative;
+  margin-bottom:10px;
+  &:after {
+    .bottom-line(#ccc)
+  }
+  dl {
+    dt {
+      font-size:14px;
+      font-weight:normal;
+    }
+    dd {
+      font-size:14px;
+    }
+  }
+}
+.line-chart {
+  height:4.2rem;
+  width:100%;
+  background-color:#fff !important;
+  position: relative;
+  margin-bottom:10px;
+  &:before {
+    .top-line(#ccc)
+  }
+  &:after {
+    .bottom-line(#ccc)
+  }
+}
+.timeline {
+  background-color:#fff;
+  position:relative;
+  padding:.26rem .2rem;
+  &:before {
+    .top-line(#ccc)
+  }
+}
+

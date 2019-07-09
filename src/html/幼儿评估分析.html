@@ -13,13 +13,21 @@
 </head>
 
 <body>
-  <div class="">
+  <div class="g-flexview">
     <div class="g-scrollview">
       <div class="banner">
         <h3 class="class-name">K-D3</h3>
         <p>20名幼儿·指标完成度60%</p>
         <div class="swiper-container">
           <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
             <div class="swiper-slide">
               <dl>
                 <dt>
@@ -161,8 +169,8 @@
     $(function () {
       // 图片轮播
       var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 4,
-        spaceBetween: 30
+        slidesPerView: 5,
+        spaceBetween: 10
       });
 
     })

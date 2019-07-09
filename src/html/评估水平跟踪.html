@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>评估水平跟踪</title>
+  <link rel="stylesheet" href="../css/ydui.css">\
+  <link rel="stylesheet" href="../css/pages/horizontal-tracking.css">
+  <script src="../js/ydui.flexible.js"></script>
 </head>
+
 <body>
-  
+  <div class="g-flexview">
+    <div class="g-scrollview">
+      <div class="banner">
+        <dl>
+          <dt>幼儿姓名：</dt>
+          <dd>李雨琪</dd>
+        </dl>
+        <dl>
+          <dt>负责老师：</dt>
+          <dd>贾荔瑶 · K-D3 · 班主任</dd>
+        </dl>
+        <dl>
+          <dt>当前水平</dt>
+          <dd>水平5</dd>
+        </dl>
+        <dl>
+          <dt>班级水平</dt>
+          <dd>水平5</dd>
+        </dl>
+        <dl>
+          <dt>年级水平</dt>
+          <dd>水平4</dd>
+        </dl>
+      </div>
+      <div class="line-chart" id="lineChart"></div>
+      <div class="timeline"></div>
+    </div>
+  </div>
+  <script src="../js/jquery-2.1.4.min.js"></script>
+  <script src="../js/echarts.min.js"></script>
+  <script>
+    $(function () {
+      var chart = echarts.init($('#lineChart')[0])
+      var option = {
+        title: {
+          left: 'center',
+          top: '14px',
+          text: '主动性与计划性发展趋势'
+        },
+        tooltip: {},
+        xAxis: {
+          splitNumber: 1,
+          axisLabel: {
+            interval: 0, //类目全显
+            // rotate: -45, //顺时针旋转45度
+            textStyle: {
+              color: '#b7b7b7', //坐标值得具体的颜色
+            }
+          },
+          data: ["03.18", "03.19", "03.20", "04.20", "04.21", "05.06", "05.08", "05.09", "05.10"]
+        },
+        yAxis: {
+          axisLabel: {
+            textStyle: {
+              color: '#b7b7b7', //坐标值得具体的颜色
+            }
+          },
+        },
+        series: [{
+          type: 'line',
+          symbol: 'circle',
+          symbolSize: 7,
+          lineStyle: {
+            color: '#1db2f5',
+            shadowBlur: 12,
+            shadowColor: '#1db2f5',
+            shadowOffsetX: 1,
+            shadowOffsetY: 1
+          },
+          itemStyle: {
+            color: '#000',
+            borderWidth: 1,
+            borderColor: '#FFF'
+          },
+          data:[20,30,40,40,50,50,60,20,35]
+        }]
+      }
+      chart.setOption(option)
+    })
+  </script>
 </body>
+
 </html>
