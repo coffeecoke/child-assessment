@@ -29,48 +29,7 @@
                 </div>
                 <div class="img-list">
                     <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
-                </div>
-                <div class="img-list">
-                    <img src="../imgs/mine-list-img.jpg" alt="">
+                    <input type="checkbox" name="checkedImg">
                 </div>
                 <div class="img-list">
                     <img src="../imgs/mine-list-img.jpg" alt="">
@@ -93,6 +52,38 @@
             </div>
         </div>
     </div>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/ydui.js"></script>
+    <script>
+        $(function () {
+            var dialog = window.YDUI.dialog;
+            var $index = $('<span class="index"></span>')
+            var num = 1;
+            var max = 6
+            $('.img-lists').on('click', '.img-list', function () {
+                if (!$(this).find('.index').length > 0) {
+                    if (num > max) {
+                        dialog.notify('最多新增' + max + '张', 2000, function () {
+                        });
+                        return
+                    }
+                    $(this).append($index.clone())
+                    $(this).find('.index').text(num)
+                    num++
+                } else {
+                    var currNum = parseInt($(this).find('.index').text())
+                    $(this).find('.index').remove()
+                    $.each($('.index'), function (index, item) {
+                        if (parseInt($(this).text()) > currNum) {
+                            $(this).text(parseInt($(this).text()) - 1)
+                        }
+                    })
+                    num--
+                }
+
+            })
+        })
+    </script>
 </body>
 
 </html>
