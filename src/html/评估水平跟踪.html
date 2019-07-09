@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>评估水平跟踪</title>
-  <link rel="stylesheet" href="../css/ydui.css">\
+  <link rel="stylesheet" href="../css/ydui.css">
+  <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="../css/pages/horizontal-tracking.css">
   <script src="../js/ydui.flexible.js"></script>
 </head>
@@ -24,20 +25,67 @@
           <dd>贾荔瑶 · K-D3 · 班主任</dd>
         </dl>
         <dl>
-          <dt>当前水平</dt>
+          <dt>当前水平：</dt>
           <dd>水平5</dd>
         </dl>
         <dl>
-          <dt>班级水平</dt>
+          <dt>班级水平：</dt>
           <dd>水平5</dd>
         </dl>
         <dl>
-          <dt>年级水平</dt>
+          <dt>年级水平：</dt>
           <dd>水平4</dd>
         </dl>
       </div>
       <div class="line-chart" id="lineChart"></div>
-      <div class="timeline"></div>
+      <div class="timeline">
+        <dl>
+          <dt>
+            <i class="icon user-icon"></i>
+            <span>哈哈</span>
+          </dt>
+          <dd>
+            <h3 class="red-text">唐不苦 人工评定 水平5</h3>
+            <span>2019-04-21 10:04</span>
+          </dd>
+          <dd>
+            <h3>唐不苦 人工评定 水平5<span class="revised">已修订</span></h3>
+            <span>2019-04-21 10:04</span>
+          </dd>
+          <dd>
+            <h3>唐不苦 人工评定 水平5 <span class="warning fa fa-exclamation-circle"></span></h3>
+            <span>2019-04-21 10:04</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <i class="icon check-icon"></i>
+            <span>水平3</span>
+          </dt>
+          <dd>
+            <h3>唐不苦 人工评定 水平5</h3>
+            <span>2019-04-21 10:04</span>
+          </dd>
+          <dd>
+            <h3>唐不苦 人工评定 水平5</h3>
+            <span>2019-04-21 10:04</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <i class="icon check-icon"></i>
+            <span>水平3</span>
+          </dt>
+          <dd>
+            <h3>唐不苦 人工评定 水平5</h3>
+            <span>2019-04-21 10:04</span>
+          </dd>
+          <dd>
+            <h3>唐不苦 人工评定 水平5</h3>
+            <span>2019-04-21 10:04</span>
+          </dd>
+        </dl>
+      </div>
     </div>
   </div>
   <script src="../js/jquery-2.1.4.min.js"></script>
@@ -46,10 +94,15 @@
     $(function () {
       var chart = echarts.init($('#lineChart')[0])
       var option = {
+        color: ['#1db2f5'],
         title: {
           left: 'center',
           top: '14px',
-          text: '主动性与计划性发展趋势'
+          text: '主动性与计划性发展趋势',
+          textStyle: {
+            fontSize: 14,
+            fontWeight: 'normal'
+          }
         },
         tooltip: {},
         xAxis: {
@@ -73,20 +126,14 @@
         series: [{
           type: 'line',
           symbol: 'circle',
-          symbolSize: 7,
-          lineStyle: {
-            color: '#1db2f5',
-            shadowBlur: 12,
-            shadowColor: '#1db2f5',
-            shadowOffsetX: 1,
-            shadowOffsetY: 1
-          },
+          symbolSize: 12,
+          // lineStyle: {
+          //   color: '#000000'
+          // },
           itemStyle: {
-            color: '#000',
-            borderWidth: 1,
-            borderColor: '#FFF'
+            // color: '#fff'
           },
-          data:[20,30,40,40,50,50,60,20,35]
+          data: [20, 30, 40, 40, 50, 50, 60, 20, 35]
         }]
       }
       chart.setOption(option)
