@@ -106,7 +106,15 @@
         },
         tooltip: {},
         xAxis: {
-          splitNumber: 1,
+          // splitNumber: 1,
+          type: 'category',
+          splitLine: {
+            show:true,
+            lineStyle:{
+              color:'#d5d5d5',
+              width:1
+            }
+          },
           axisLabel: {
             interval: 0, //类目全显
             // rotate: -45, //顺时针旋转45度
@@ -120,6 +128,11 @@
           axisLabel: {
             textStyle: {
               color: '#b7b7b7', //坐标值得具体的颜色
+            }
+          },
+          splitLine: {
+            lineStyle:{
+              color:['#d5d5d5']
             }
           },
         },
