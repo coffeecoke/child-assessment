@@ -1,0 +1,20 @@
+@import '../extend/variables.less';
+@import '../extend/mixins.less';
+.g-scrollview{
+    background: #f5f5f5;
+}
+.letter-box{
+    height:.62rem;
+    &:after {
+      .bottom-line(#e5e5e5);
+      .top-line(#e5e5e5);
+    }
+    .letter-text{
+        height:.62rem;
+        line-height: .62rem;
+        padding-left:.3rem;
+    }
+}
+.m-cell{
+    margin-bottom:0;
+}
