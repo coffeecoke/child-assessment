@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>班级记录情况</title>
+  <link rel="stylesheet" href="../css/ydui.css">
+  <link rel="stylesheet" href="../css/pages/class-record.css">
+  <link rel="stylesheet" href="../plugins/swiper/css/swiper.css">
+  <script src="../js/ydui.flexible.js"></script>
+</head>
+
+<body>
+  <div class="g-flexview">
+    <div class="g-scrollview">
+      <div class="banner">
+        <h3 class="class-name">K-D3</h3>
+        <p>20名幼儿·指标完成度60%</p>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
+            <div class="swiper-slide">
+              <dl>
+                <dt>
+                  <img src="../imgs/user-photo.jpg" alt="">
+                </dt>
+                <dd>唐不苦</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bar-chart" id="barChart"></div>
+      <div class="m-celltitle">老师评估情况</div>
+      <table>
+        <thead>
+          <tr>
+            <th>姓名</th>
+            <th>今日</th>
+            <th>累计</th>
+            <th>最近活动</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>都文静</td>
+            <td class="green-txt">
+              +15
+            </td>
+            <td>256</td>
+            <td class="gray-txt">
+              20分钟前
+            </td>
+          </tr>
+          <tr>
+            <td>都文静</td>
+            <td class="green-txt">
+              +15
+            </td>
+            <td>256</td>
+            <td class="gray-txt">
+              20分钟前
+            </td>
+          </tr>
+          <tr>
+            <td>都文静</td>
+            <td class="green-txt">
+              +15
+            </td>
+            <td>256</td>
+            <td class="gray-txt">
+              20分钟前
+            </td>
+          </tr>
+          <tr>
+            <td>都文静</td>
+            <td class="green-txt">
+              +15
+            </td>
+            <td>256</td>
+            <td class="gray-txt">
+              20分钟前
+            </td>
+          </tr>
+          <tr>
+            <td>都文静</td>
+            <td class="green-txt">
+              +15
+            </td>
+            <td>256</td>
+            <td class="gray-txt">
+              20分钟前
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+      <div class="m-celltitle">领域指标完成情况</div>
+      <div class="scroll-table">
+          <table>
+            <thead>
+              <tr>
+                <td width="190px">名称</td>
+                <td width="70px">累计</td>
+                <td width="70px">幼儿</td>
+                <td width="70px">%</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>学习方式</td>
+                <td>180</td>
+                <td>20</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td colspan="12">
+                  <table class="second-table">
+                    <tr>
+                      <td width="170px">主动与针对性</td>
+                      <td width="70px">60</td>
+                      <td width="70px">20</td>
+                      <td width="70px">100%</td>
+                    </tr>
+                    <tr>
+                      <td width="170px">使用材料解决问题</td>
+                      <td width="70px">60</td>
+                      <td width="70px">20</td>
+                      <td width="70px">100%</td>
+                    </tr>
+                    <tr>
+                      <td width="170px">反思</td>
+                      <td width="70px">60</td>
+                      <td width="70px">20</td>
+                      <td width="70px">100%</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>社交情感与发展</td>
+                <td>50</td>
+                <td>10</td>
+                <td>59%</td>
+                
+              </tr>
+              <tr>
+                <td>数学</td>
+                <td>50</td>
+                <td>20</td>
+                <td>80%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+  <script src="../js/jquery-2.1.4.min.js"></script>
+  <script src="../js/echarts.min.js"></script>
+  <script src="../plugins/swiper/js/swiper.min.js"></script>
+  <script>
+    $(function () {
+      // 图片轮播
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,
+        spaceBetween: 30
+      });
+
+    })
+    $(function () {
+      var chart = echarts.init($('#barChart')[0])
+      var option = {
+        title: {
+          left:'center',
+          top:'14px',
+          text: '班级综合分析'
+        },
+        tooltip: {},
+
+        xAxis: {
+          splitNumber:1,
+          axisLabel:{
+              interval:0,  //类目全显
+              rotate:-45,   //顺时针旋转45度
+              textStyle: {
+                color: '#b7b7b7',//坐标值得具体的颜色
+              }
+          },
+          data: ["学习方式", "社交情感", "身体发育", "中文语言", "数学", "创造性艺术", "科学与技术", "社会学习", "英文语言"]
+        },
+        yAxis: {
+          axisLabel:{
+              textStyle: {
+                color: '#b7b7b7',//坐标值得具体的颜色
+              }
+          },
+        },
+        series: [{
+          type: 'bar',
+          markLine:{
+            data:[
+                {type: 'average',name:'平均值'}
+            ]
+          },
+          data: [{
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#c19fec'
+                }
+              },
+              value: 10
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#8696af'
+                }
+              },
+              value: 30
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#325694'
+                }
+              },
+              value: 40
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#f1b086'
+                }
+              },
+              value: 50
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#558039'
+                }
+              },
+              value: 30
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#c84249'
+                }
+              },
+              value: 10
+            },
+
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#fdbf2e'
+                }
+              },
+              value: 20
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#6f349e'
+                }
+              },
+              value: 40
+            },
+            {
+              // barGap: '-100%',
+              barWidth: 25,
+              itemStyle: {
+                normal: {
+                  color: '#808080'
+                }
+              },
+              value: 30
+            }
+          ]
+        }]
+
+      };
+      chart.setOption(option)
+    })
+  </script>
+</body>
+
+</html>

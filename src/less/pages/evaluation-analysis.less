@@ -1,0 +1,60 @@
+// 幼儿评估分析
+// 班级记录分析
+@import '../extend/variables.less';
+@import '../extend/mixins.less';
+.m-celltitle {
+  padding:0.1rem 0.24rem 0.1rem
+}
+.banner {
+  padding: .5rem .6rem .44rem;
+  background-color:#fff;
+  position: relative;
+  &:after {
+    .bottom-line(#ccc)
+  }
+  .class-name {
+    font-size:22px;
+    text-align: center;
+  }
+  p {
+    color:#9f9f9f;
+    font-size:12px;
+    margin-top:.36rem;
+    margin-bottom:.5rem;
+    text-align: center;
+  }
+}
+.swiper-slide {
+  dl{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    dt {
+      width:1rem;
+      height:1rem;
+      img {
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+      }
+    }
+    dd {
+      font-weight:bold;
+      font-size:14px;
+      margin-top:10px;
+    }
+  }
+}
+.bar-chart {
+  width:100%;
+  height:5.6rem;
+  background-color:#fff !important; 
+  margin-top:10px;
+  position: relative;
+  &:before {
+    .top-line(#ccc)
+  }
+  &:after {
+    .bottom-line(#ccc)
+  }
+}
