@@ -16,15 +16,27 @@
         flex-wrap: wrap;
         justify-content: space-between;
         li{
-            width:2.26rem;
-            height:2.26rem;
-            margin-bottom:5px;
+            width:33.3%;
+            padding-top:33.3%;
+            border:solid 2px #fff;
+            position: relative;
+            // height:2.26rem;
+            // margin-bottom:5px;
             img{
+                position: absolute;
+                top:0;
                 width:100%;
                 height:100%;
             }
         }
     }
+    .add-img:after{
+        content: '';
+        width: 33%;
+        li{
+            width:33%;
+          }
+      }
 }
 .assessment-conditions{
     background: #fff;
