@@ -665,12 +665,13 @@
                     e.stopPropagation();
 
                     // 是否保留弹窗
+                    btnArr[p].callback && btnArr[p].callback();
                     if (!btnArr[p].stay) {
                         // 释放页面滚动
                         ydui.util.pageScroll.unlock();
                         $dom.remove();
                     }
-                    btnArr[p].callback && btnArr[p].callback();
+                    
                 });
             })(i);
             $btnBox.append($btn);
