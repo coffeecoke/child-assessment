@@ -97,12 +97,15 @@
   flex-wrap: wrap;
   margin:12px 0;
   .img-list {
-    width:33.33%;
-    padding-right:5px;
-    padding-bottom:5px;
+    width: 33.33%;
+    padding-top: 33.33%;
+    position: relative;
+    border: 2px solid transparent;
     img {
-      min-width:100%;
-      height:1.56rem;
+      position: absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:100%;
     }
   }
 }
