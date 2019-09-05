@@ -18,7 +18,7 @@
     top:50px;
     color:#e51c23;
     border:2px solid #e51c23;
-    width:1.5rem;
+    width:1.6rem;
     height:.6rem;
     line-height: .6rem;
     text-align: center;
@@ -101,9 +101,11 @@
     }
     dl {
       display:flex;
-      align-items: center;
+      align-items: flex-start;
     }
     dt {
+      display:flex;
+      flex-wrap:wrap;
       span {
         font-size:14px;
         font-weight:bold;
@@ -111,6 +113,9 @@
       }
     }
     dd {
+      display: flex;
+      flex:1;
+      flex-wrap:wrap;
       color:#aeaeae;
       font-size:12px;
       span {
