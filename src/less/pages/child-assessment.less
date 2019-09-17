@@ -98,23 +98,20 @@
   .child-list {
     li {
       margin-bottom:.26rem;
-    }
-    dl {
-      display:flex;
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
-    }
-    dt {
-      span {
+      a {
         font-size:14px;
         font-weight:bold;
+        display:flex;
+        align-items: center;
         margin-right:.12rem;
       }
-    }
-    dd {
-      color:#aeaeae;
-      font-size:12px;
       span {
-        padding:0 .12rem;
+        color:#aeaeae;
+        font-size:12px;
+        padding:0 .14rem;
         border-right:1px solid #aeaeae;
         &:last-child {
           border:none;
@@ -129,6 +126,36 @@
         }
       }
     }
+    // dl {
+    //   display:flex;
+    //   align-items: center;
+    // }
+    // dt {
+    //   span {
+    //     font-size:14px;
+    //     font-weight:bold;
+    //     margin-right:.12rem;
+    //   }
+    // }
+    // dd {
+    //   color:#aeaeae;
+    //   font-size:12px;
+    //   span {
+    //     padding:0 .12rem;
+    //     border-right:1px solid #aeaeae;
+    //     &:last-child {
+    //       border:none;
+    //     }
+    //     .up-icon {
+    //       width:.32rem;
+    //       height:.32rem;
+    //       display:inline-block;
+    //       vertical-align: middle;
+    //       background:url(../../imgs/up-icon.png) center no-repeat;
+    //       background-size:100% auto;
+    //     }
+    //   }
+    // }
   }
 }
 .info-badge {
