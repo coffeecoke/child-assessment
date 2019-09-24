@@ -10,11 +10,19 @@ body {
     position: relative;
     .icon {
       position: absolute;
-      top:50%;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
-      left:10px;
-      font-size:20px;
-      color:#c9c9c9;
+      left: 6px;
+      font-size: 20px;
+      color: #c9c9c9;
+      background: url(../../imgs/search-icon.png) center no-repeat;
+      background-size: 100% 100%;
+      &:before {
+        display: none;
+      }
     }
     input {
       width:100%;

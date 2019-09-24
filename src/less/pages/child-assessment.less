@@ -107,6 +107,19 @@
         display:flex;
         align-items: center;
         margin-right:.12rem;
+        &:first-child {
+          position: relative;
+          padding-left:10px;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            top: 2px;
+            bottom: 2px;
+            left: 0;
+            background-color: #000;
+          }
+        }
       }
       span {
         color:#aeaeae;
@@ -328,6 +341,9 @@ footer.comment {
       border:1px solid #ecedef;
       border-radius: .127rem;
       background-color:#f4f5f6;
+      &::placeholder {
+        color:#a2a2a2;
+      }
     }
   }
   .like-item {
